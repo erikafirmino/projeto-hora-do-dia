@@ -4,7 +4,13 @@ function carregar(){
     var texto = document.getElementById('txt1')
     var data = new Date();
     var hora = data.getHours();
-    msg.innerHTML = `Agora sao ${hora} horas.`
+    var minutos = data.getMinutes();
+    var dia = data.getDate();
+    var mes = (data.getMonth() + 1);
+    var ano = data.getFullYear();
+
+    msg.innerHTML = `Hoje é <strong>${dia} / ${mes} / ${ano} </strong><br>
+                    Agora são ${hora}:${minutos}.`
     if(hora >= 0 && hora < 12){
         //bom dia
         img.src = 'manha1.png'
